@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>AnamLibrary | Transaksi Peminjaman</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://unpkg.com/dexie@3/dist/dexie.js"></script>
+
+  <script src="js/auth.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/peminjaman.js"></script>
+</head>
+<body>
+  
+  <main>
+    
+    <header>
+      <h1>📚 Anam<span>Library</span></h1>
+      <nav>
+        <a href="index.html" class="nav-btn">Beranda</a>
+        <a href="buku.html" class="nav-btn">Buku</a>
+        <a href="anggota.html" class="nav-btn">Anggota</a>
+      </nav>
+    </header>
+    
+    <div class="divider"></div>
+  
+    <section class="borrowing-section">
+      <h2>📖 Transaksi Peminjaman</h2>
+  
+      <div class="input-container">
+        
+        <label>Buku</label><br>
+        <select id="pilihBuku"></select><br>
+      
+        <label>Anggota</label><br>
+        <select id="pilihAnggota"></select><br>
+      
+        <label>Tanggal Pinjam</label><br>
+        <input type="date" id="tgl_pinjam"><br>
+      
+        <label>Tanggal Kembali</label><br>
+        <input type="date" id="tgl_kembali"><br>
+      
+        <button onclick="simpanTransaksi()">Pinjam</button>
+      
+      </div>
+      
+      <div class="divider"></div>
+      
+      <h2>📖 Data Peminjaman</h2>
+      
+      <input type="text" id="search" placeholder="Cari data..." onkeyup="search()">
+      
+      <div class="table-container">
+        <table border="1" cellpadding="5">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Judul Buku</th>
+              <th>Nama Anggota</th>
+              <th>Status</th>
+              <th>Tgl Pinjam</th>
+              <th>Tgl Kembali</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="tabelTransaksi"></tbody>
+        </table>
+      </div>
+      
+    </section>
+    
+    <div class="divider"></div>
+    
+    <footer>
+      <p>
+        &copy; 2026 | AnamLibrary - Perpustakaan Resmi<br>
+        All Rights Reserved
+      </p>
+    </footer>
+    
+  </main>
+
+</body>
+</html>

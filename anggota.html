@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>AnamLibrary | Data Anggota</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://unpkg.com/dexie@3/dist/dexie.js"></script>
+
+  <script src="js/auth.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/anggota.js"></script>
+</head>
+<body>
+  
+  <main>
+    
+    <header>
+      <h1>📚 Anam<span>Library</span></h1>
+      <nav>
+        <a href="index.html" class="nav-btn">Beranda</a>
+        <a href="buku.html" class="nav-btn">Buku</a>
+        <a href="peminjaman.html" class="nav-btn">Peminjaman</a>
+      </nav>
+    </header>
+    
+    <div class="divider"></div>
+  
+    <section class="member-section">
+      <h2>👨 Tambah Anggota</h2>
+  
+      <div class="input-container">
+        <input type="text" id="nis" placeholder="Masukkan NIS"><br>
+        <input type="text" id="nama" placeholder="Masukkan Nama"><br>
+        <input type="text" id="kelas" placeholder="Masukkan Kelas"><br>
+        <button onclick="simpanAnggota()">Simpan Data Anggota</button>
+      </div>
+    
+      <div class="divider"></div>
+      
+      <h2>👨 Data Anggota</h2>
+      
+      <input type="text" id="search" placeholder="Cari data..." onkeyup="search()">
+      
+      <div class="table-container">
+        <table border="1" cellpadding="5">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>NIS</th>
+              <th>Nama</th>
+              <th>Kelas</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="tabelAnggota"></tbody>
+        </table>
+      </div>
+      
+    </section>
+    
+    <div class="divider"></div>
+    
+    <footer>
+      <p>
+        &copy; 2026 | AnamLibrary - Perpustakaan Resmi<br>
+        All Rights Reserved
+      </p>
+    </footer>
+    
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+/* --- RESET & BASE --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5; /* Abu-abu sangat muda agar mata tidak lelah */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* --- MAIN CONTAINER (KOTAK TENGAH) --- */
+main {
+  background: white;
+  margin: 1.5rem 12px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh; /* Sedikit jarak dari tepi atas/bawah */
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow-y: auto; /* Scroll jika konten panjang */
+  padding: 30px;
+  position: relative;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* --- HEADER & NAV --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+header h1 span {
+  color: #007bff;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  text-decoration: none;
+  background: #eee;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* --- FORM INPUTS --- */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+input, select {
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid #007bff;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* --- SEARCH BAR --- */
+#search {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1.5px solid #007bff;
+}
+
+/* --- TABLE STYLING --- */
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Scroll horizontal jika tabel lebar */
+  margin-top: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Mencegah kolom terlalu sempit */
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f8f9fa;
+  color: #555;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* --- HOME PAGE BUTTONS --- */
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cta-btn {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  background: #0056b3;
+}
+
+.home-container button {
+  background-color: #d90009;
+  font-size: 1rem;
+}
+
+.home-container button:hover {
+  background-color: #aa100a;
+}
+
+/* --- MISC --- */
+.divider {
+  height: 2px;
+  background: #eee;
+  margin: 30px 0;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* --- RESPONSIVITAS --- */
+
+/* Tablet */
+@media (max-width: 920px) {
+  body {
+    padding: 10px;
+  }
+  
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .home-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+  main {
+    padding: 15px;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .nav-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  
+  header h1 {
+    font-size: 1.67rem;
+  }
+}
